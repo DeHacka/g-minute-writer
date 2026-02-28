@@ -26,6 +26,7 @@ class MinutesRequest(BaseModel):
 
 
 @app.get("/")
+@app.head("/")
 def health_check():
     return {"status": "Minute Writer AI Service is running"}
 
