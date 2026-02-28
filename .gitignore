@@ -1,0 +1,25 @@
+# Create the .gitignore file
+echo "# Environment files - never commit API keys
+.env
+*.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Expo
+mobile/.expo/
+mobile/dist/
+mobile/build/
+
+# OS files
+.DS_Store
+Thumbs.db" > .gitignore
