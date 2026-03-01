@@ -2,7 +2,7 @@ const axios = require("axios");
 const FormData = require("form-data");
 require("dotenv").config();
 
-const PYTHON_URL = process.env.PYTHON_SERVICE_URL || "http://localhost:8000";
+const PYTHON_URL = process.env.PYTHON_URL || "http://localhost:8000";
 
 /**
  * Sends audio buffer to Python transcription service.

@@ -8,6 +8,8 @@ const { generatePDF } = require("./pdfGenerator");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const SERVER_URL = process.env.SERVER_URL;
+const PYTHON_URL = process.env.PYTHON_URL;
 
 // Middleware
 app.use(cors());
@@ -116,6 +118,6 @@ app.post("/generate-minutes", async (req, res) => {
 
 // Start Server
 app.listen(PORT, () => {
-    console.log(`\n Minute Writer Backend is running on http://localhost:${PORT}`);
-    console.log(`   Make sure Python service is running on http://localhost:8000\n`);
+    console.log(`\n Minute Writer Backend is running on ${SERVER_URL}:${PORT}`);
+    console.log(`   Make sure Python service is running on ${PYTHON_URL}:8000\n`);
 });
